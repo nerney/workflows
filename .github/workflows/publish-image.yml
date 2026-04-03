@@ -2,6 +2,8 @@ name: Publish Image
 run-name: Publish ${{ github.repository }} image
 on:
   workflow_call:
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 jobs:
   publish-image:
     if: ${{ github.actor == github.repository_owner }}
